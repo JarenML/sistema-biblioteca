@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Libro{% endblock %}
+
+{% block content %}
+   <h1>Template Libro</h1>
+   <h3>Lista de Libros</h3>
+   <ul>
+      {% for libro in libros %}
+         <li>
+            <a href="{% url "libro-edit" libro.id %}">{{ libro.titulo }}</a>
+            <a href="{% url "libro-delete" libro.id %}">&#x2718;</a>
+         </li>
+      {% endfor %}
+    </ul>
+
+   <br>
+   <a href="{% url "libro" %}">Crear</a>
+   <h3>{% if form.instance.pk %}Editar Libro{% else %}Crear nuevo Libro{% endif %}</h3>
+   <form action="" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Guardar">
+   </form>
+{% endblock %}

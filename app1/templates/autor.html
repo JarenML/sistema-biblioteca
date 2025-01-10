@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Autor{% endblock %}
+
+{% block content %}
+    <h1>Template Autor</h1>
+    <h3>Lista de autores</h3>
+    <ul>
+        {% for autor in autores %}
+            <li>
+                <a href="{% url "autor-edit" autor.id %}">{{ autor }}</a>
+                <a href="{% url "autor-delete" autor.id %}">&#x2718;</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="{% url "autor" %}">Crear</a>
+    <h3>{% if form.instance.pk %}Editar Autor{% else %}Crear nuevo autor{% endif %}</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Guardar"> 
+    </form>
+{% endblock %}

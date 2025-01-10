@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <h1>Template Prestamo</h1>
+    <h3>Lista de Prestamos</h3>
+    <ul>
+        {% for prestamo in prestamos %}
+            <li>
+                <a href="{% url "prestamo-edit" prestamo.id %}">{{ prestamo }}</a>
+                <a href="{% url "prestamo-delete" prestamo.id %}">&#x2718;</a>
+            </li>
+
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="{% url "prestamo" %}">Crear</a>
+    <h3>{% if form.instance.pk %}Editar Prestamo{% else %}Crear nuevo Prestamo{% endif %}</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Guardar">
+    </form>
+    
+{% endblock %}

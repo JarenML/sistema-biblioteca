@@ -1,0 +1,32 @@
+{% extends "layouts/base.html" %}
+
+
+{% block title %}Categoria{% endblock %}
+
+{% block content %}
+    <div id="categoria">
+        <h1>Template Categoria</h1>
+        <h3>Lista de categorias</h3>
+        {% if categorias %}
+            <ul>
+                {% for cat in categorias %}
+                    <li>
+                        <a href="{% url "categoria-edit" cat.id %}">{{ cat.nombre }}</a>
+                        <a href="{% url "categoria-delete" cat.id %}">&#x2718;</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hay categorias disponibles</p>
+        {% endif %}
+        
+        <a href="{% url "categoria" %}">Crear</a>
+        <h3>{% if form.instance.pk %}Editar categoria{% else %}Crear categoria{% endif %}</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Guardar">
+        </form>
+    </div>
+    
+{% endblock %}
