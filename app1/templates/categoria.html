@@ -24,12 +24,15 @@
         </div>
         
         <div class="formulario">
-            <a href="{% url "categoria" %}">Crear</a>
-            <h3>{% if form.instance.pk %}Editar categoria{% else %}Crear categoria{% endif %}</h3>
+            <div class="cabecera">
+                {% if form.instance.pk %}<a href="{% url "categoria" %}"> <span>&#x2190;</span> Crear</a> {% endif %}
+                <h3>{% if form.instance.pk %}Editar categoria{% else %}Crear categoria{% endif %}</h3>
+            </div>
+            
             <form action="" method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <input type="submit" value="Guardar">
+                <input type="submit" value="{% if form.instance.pk %}Guardar edicion{% else %}Guardar{% endif %}">
             </form>
         </div>
         

@@ -89,7 +89,7 @@ footer{
     max-width: 100%;
     width: 500px;
     border-radius: 10px;
-    box-shadow: 10px 10px 15px rgbA(47, 51, 105);;
+    box-shadow: 10px 10px 15px rgb(47, 51, 105);
     margin: 50px 0 40px;
     transition: transform .7s ease, box-shadow 0.5s ease;
 }
@@ -105,12 +105,18 @@ footer{
 
 
 /* Para el template de CATEGORIAS*/
+.categoria{
+    display: flex;
+    padding-top: 50px;
+}
+
 .categoria #caja-lista{
     display: inline-block;
     border: 7px outset rgb(1, 112, 152);
     overflow-y: scroll;
-    height: 250px;
+    height: 260px;
     border-radius: 5px;
+    margin-left: 150px;
 }
 
 .categoria #caja-lista h3{
@@ -162,4 +168,71 @@ footer{
     background: rgb(144, 183, 189); 
 }
 
+/*Formulario categoria*/
+
+.formulario{
+    position: relative;
+    margin-left: 320px;
+    min-height: 150px;
+    height: 220px;
+    width: 300px;
+    border-radius: 7px;
+    background: linear-gradient(#f18f6f 0%, #fafc72 90%);
+    color: white;
+}
+
+.formulario .cabecera{
+    position: relative;
+    display: flex;
+    background-color: transparent;
+    margin-bottom: 40px;
+}
+
+.formulario .cabecera a{
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    margin-left: 0;
+    text-decoration: none;
+}
+
+
+
+.formulario .cabecera h3{
+    text-align: center;
+    margin-left: 0;
+    width: 100%;
+}
+.formulario label{
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+
+}
+
+.formulario input[type="text"]{
+    display: block;
+    margin: auto;
+    width: 90%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(223, 221, 221);
+    padding-top: 5px;
+}
+
+.formulario input[type="submit"]{
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    height: 30px;
+    width: 80%;
+    background-color: #bebdbd;
+    border-radius: 5px;
+    border: none;
+}
+
+.formulario input[type="submit"]:hover{
+    background-color: #a9a9a9;
+}
 
