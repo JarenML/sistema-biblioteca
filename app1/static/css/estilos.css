@@ -1,0 +1,110 @@
+:root{
+    --fuente-title: Sleepy Mondy
+}
+
+@font-face {
+    font-family: Sleepy Mondy;
+    src: url('../fonts/Sleepy\ Moody.otf');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    min-height: 100vh;
+    background-color: #f3eeee;
+    padding: 50px;
+}
+
+
+header ul{
+    margin-top: 1px;
+    display: flex;
+    list-style-type: none;
+    background-color: rgb(93, 93, 252);
+    box-shadow: 0 5px 10px rgb(72, 72, 255);
+    flex-wrap: wrap;
+}
+
+header ul li{
+    padding: 20px;
+    height: 45px;
+    width: 175px;
+    text-align: center;
+}
+
+header ul li:hover{
+    background-color: rgb(72, 72, 255);
+}
+
+header ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: cursive;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-style: italic;
+    transition: font-size 0.6s ease;
+}
+
+
+header ul li a:hover{
+    font-size: 35px;
+}
+
+
+
+footer{
+    text-align: center;
+    background-color: #9c8989;
+    padding: 30px;
+    color: azure;
+}
+
+/*Para el index*/
+
+.home{
+    text-align: center;
+    
+}
+
+
+.home h1{
+    color: rgb(188, 74, 249);
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 40px;
+    text-shadow: 3px 5px 5px rgb(179, 140, 178);
+    font-family: var(--fuente-title);
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    border-bottom: 3px double rgb(102, 0, 255);
+    max-width: 580px;
+}
+
+.home img{
+    border: 3px dotted rgb(59, 65, 146);
+    max-width: 100%;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(47, 51, 105);;
+    margin: 50px 0 40px;
+    transition: transform .7s ease, box-shadow 0.5s ease;
+}
+
+.home img:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 25px rgb(68, 84, 255);
+}
+
+.home p{
+    font-size: 18px;
+}
+
+
+
+
+
