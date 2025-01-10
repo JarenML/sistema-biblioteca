@@ -64,8 +64,7 @@ footer{
     color: azure;
 }
 
-/*Para el index*/
-
+/*Para el INDEX*/
 .home{
     text-align: center;
     
@@ -90,7 +89,7 @@ footer{
     max-width: 100%;
     width: 500px;
     border-radius: 10px;
-    box-shadow: 10px 10px 15px rgb(47, 51, 105);;
+    box-shadow: 10px 10px 15px rgbA(47, 51, 105);;
     margin: 50px 0 40px;
     transition: transform .7s ease, box-shadow 0.5s ease;
 }
@@ -105,6 +104,62 @@ footer{
 }
 
 
+/* Para el template de CATEGORIAS*/
+.categoria #caja-lista{
+    display: inline-block;
+    border: 7px outset rgb(1, 112, 152);
+    overflow-y: scroll;
+    height: 250px;
+    border-radius: 5px;
+}
 
+.categoria #caja-lista h3{
+    color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgb(12, 169, 187);
+    padding: 15px 35px;
+    border-radius: 3px;
+    border: 2px solid rgb(149, 239, 255);
+}
+
+.categoria #caja-lista #lista{
+    height: 70px;
+}
+
+.categoria #caja-lista ul{
+    list-style-type: none;
+    background: linear-gradient(to bottom, rgb(197, 249, 255) 0%, rgb(177, 227, 232) 50%, rgb(197, 249, 255) 80%);
+}
+.categoria #caja-lista ul li{
+    padding: 20px 0;
+    
+}
+
+.categoria #caja-lista ul li a{
+    color: rgb(1, 45, 84);
+    text-decoration: none;
+}
+
+/* Scroll para listado de categoria*/
+.categoria #caja-lista::-webkit-scrollbar {
+    width: 14px; 
+}
+
+.categoria #caja-lista::-webkit-scrollbar-track {
+    background: #04a3ff0a; 
+    border-radius: 5px;
+    
+}
+
+.categoria #caja-lista::-webkit-scrollbar-thumb {
+    background: rgb(99, 133, 139);
+    border-radius: 5px; 
+}
+
+.categoria #caja-lista::-webkit-scrollbar-thumb:active {
+    background: rgb(144, 183, 189); 
+}
 
 
